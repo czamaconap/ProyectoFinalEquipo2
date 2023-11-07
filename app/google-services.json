@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "936327601503",
+    "firebase_url": "https://daenna-proyect-default-rtdb.firebaseio.com",
+    "project_id": "daenna-proyect",
+    "storage_bucket": "daenna-proyect.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:936327601503:android:1e0633443e40a35e7d2aea",
+        "android_client_info": {
+          "package_name": "com.equipo2"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "936327601503-o8d3eavlfdkpef543mq0nq9rbv5f0d3l.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCLtT-WXS5UKznLfAeA7kYZz1xWA9N2kEs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "936327601503-o8d3eavlfdkpef543mq0nq9rbv5f0d3l.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
