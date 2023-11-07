@@ -5,7 +5,6 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.MenuItem;
 import android.widget.ImageButton;
 
@@ -13,8 +12,6 @@ import com.equipo2.utils.FirebaseUtil;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationBarView;
 import com.google.firebase.messaging.FirebaseMessaging;
-
-import java.util.logging.Logger;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -61,7 +58,6 @@ public class MainActivity extends AppCompatActivity {
         FirebaseMessaging.getInstance().getToken().addOnCompleteListener(task -> {
                 if(task.isSuccessful()){
                     String token = task.getResult();
-                    Log.i("My Token: ", token);
                     FirebaseUtil.currentUserDetails().update("fcmToken",token);
 
                 }
