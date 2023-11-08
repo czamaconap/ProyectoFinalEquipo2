@@ -43,7 +43,26 @@
             android:layout_centerVertical="true"
             android:id="@+id/back_btn"/>
 
+        <ImageButton
+            android:id="@+id/videocall_icon"
+            android:layout_width="52dp"
+            android:layout_height="52dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="0dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:src="@drawable/videocam_icon"
+            app:tint="@color/white" />
     </RelativeLayout>
+
+    <include layout="@layout/someone_calling"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_below="@id/toolbar"
+        android:visibility="gone"
+        tools:visibility="visible"
+        android:id="@+id/someone_calling" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:layout_width="match_parent"

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/cardview_dark_background"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+        <TextView
+            android:id="@+id/incomingCallTitleTv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="Some one is calling you"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/acceptButton"
+            android:layout_width="150dp"
+            android:layout_height="40dp"
+            android:background="@color/light_green"
+            android:text="Accept"
+            android:textColor="@color/white"
+            app:layout_constraintEnd_toStartOf="@id/declineButton"
+            app:layout_constraintStart_toStartOf="@id/incomingCallTitleTv"
+            app:layout_constraintTop_toBottomOf="@id/incomingCallTitleTv" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/declineButton"
+            android:layout_width="150dp"
+            android:layout_height="40dp"
+            android:background="@color/red"
+            android:text="Decline"
+            android:textColor="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/acceptButton"
+            app:layout_constraintTop_toBottomOf="@id/incomingCallTitleTv" />
+</androidx.constraintlayout.widget.ConstraintLayout>
+

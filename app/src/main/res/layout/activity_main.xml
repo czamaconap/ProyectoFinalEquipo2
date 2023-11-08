@@ -36,12 +36,28 @@
 
     </RelativeLayout>
 
+
+
+
     <FrameLayout
+        android:id="@+id/main_frame_layout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@id/main_toolbar"
         android:layout_above="@id/divider"
-        android:id="@+id/main_frame_layout"/>
+        android:layout_below="@id/main_toolbar"
+        android:layout_marginTop="-1dp"
+        android:layout_marginBottom="1dp" />
+
+    <include
+        android:id="@+id/someone_calling"
+        layout="@layout/someone_calling"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_below="@id/main_toolbar"
+        android:visibility="gone"
+        tools:visibility="visible" />
 
     <com.google.android.material.divider.MaterialDivider
         android:layout_width="match_parent"
