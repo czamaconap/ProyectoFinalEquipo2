@@ -143,9 +143,7 @@ public class ChatActivity extends AppCompatActivity {
                     //first time chat
                     chatroomModel = new ChatroomModel(
                             chatroomId,
-                            Arrays.asList(FirebaseUtil.currentUserId(),otherUser.getUserId()),
-                            Timestamp.now(),
-                            ""
+                            Arrays.asList(FirebaseUtil.currentUserId(),otherUser.getUserId())
                     );
                     FirebaseUtil.getChatroomReference(chatroomId).set(chatroomModel);
                 }

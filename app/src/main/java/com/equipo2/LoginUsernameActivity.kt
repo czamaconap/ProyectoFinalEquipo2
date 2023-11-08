@@ -7,9 +7,8 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.ProgressBar
 import androidx.appcompat.app.AppCompatActivity
-import com.equipo2.model2.UserModel
+import com.equipo2.model.UserModel
 import com.equipo2.utils.FirebaseUtil
-import com.google.firebase.firestore.ktx.toObject
 
 class LoginUsernameActivity : AppCompatActivity() {
     private lateinit var usernameInput: EditText

@@ -1,4 +1,4 @@
-package com.equipo2.model2;
+package com.equipo2.model;
 
 import com.google.firebase.Timestamp;
 
