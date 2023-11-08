@@ -9,9 +9,8 @@ import android.widget.ProgressBar
 import androidx.appcompat.app.AppCompatActivity
 import com.equipo2.model2.UserModel
 import com.equipo2.utils.FirebaseUtil
-import com.google.firebase.Timestamp
 
-class LoginUsernameActivity2 : AppCompatActivity() {
+class LoginUsernameActivity : AppCompatActivity() {
     private lateinit var usernameInput: EditText
     private lateinit var letMeInBtn: Button
     private lateinit var progressBar: ProgressBar
@@ -30,21 +29,23 @@ class LoginUsernameActivity2 : AppCompatActivity() {
     }
 
     private fun setUsername() {
-        val username = usernameInput!!.text.toString()
+        val username = usernameInput.text.toString()
         if (username.isEmpty() || username.length < 3) {
-            usernameInput!!.error = "Username length should be at least 3 chars"
+            usernameInput.error = "Username length should be at least 3 chars"
             return
         }
         setInProgress(true)
 
-        userModel = UserModel(phoneNumber = phoneNumber,
+        userModel = UserModel(
+            phoneNumber = phoneNumber,
             username = username,
-            userId= FirebaseUtil.currentUserId())
+            userId= FirebaseUtil.currentUserId()
+        )
 
         FirebaseUtil.currentUserDetails().set(userModel).addOnCompleteListener { task ->
             setInProgress(false)
             if (task.isSuccessful) {
-                val intent = Intent(this@LoginUsernameActivity2, MainActivity::class.java)
+                val intent = Intent(this@LoginUsernameActivity, MainActivity::class.java)
                 intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
                 startActivity(intent)
             }
