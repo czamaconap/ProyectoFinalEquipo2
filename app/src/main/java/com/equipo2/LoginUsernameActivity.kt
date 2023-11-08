@@ -9,6 +9,7 @@ import android.widget.ProgressBar
 import androidx.appcompat.app.AppCompatActivity
 import com.equipo2.model2.UserModel
 import com.equipo2.utils.FirebaseUtil
+import com.google.firebase.firestore.ktx.toObject
 
 class LoginUsernameActivity : AppCompatActivity() {
     private lateinit var usernameInput: EditText
@@ -58,8 +59,11 @@ class LoginUsernameActivity : AppCompatActivity() {
             FirebaseUtil.currentUserDetails().get().addOnCompleteListener { task ->
                 setInProgress(false)
                 if (task.isSuccessful) {
-                    userModel = task.result.toObject(UserModel::class.java)!!
-                    usernameInput.setText(userModel.username)
+                    val userModel = task.result?.toObject(UserModel::class.java)
+
+                    userModel?.username.let {
+                        usernameInput.setText(it)
+                    }
                 }
             }
         }
