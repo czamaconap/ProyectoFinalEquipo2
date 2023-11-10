@@ -9,4 +9,9 @@
         android:icon="@drawable/person_icon"
         android:id="@+id/menu_profile"
         />
+
+    <item android:title="VideoCall"
+        android:icon="@drawable/ic_video_call"
+        android:id="@+id/video_call"
+        />
 </menu>

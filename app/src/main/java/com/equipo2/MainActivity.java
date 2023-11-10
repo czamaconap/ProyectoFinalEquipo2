@@ -21,6 +21,8 @@ public class MainActivity extends AppCompatActivity {
     ChatFragment chatFragment;
     ProfileFragment profileFragment;
 
+    VideoCallFragment videoCallFragment;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -28,6 +30,7 @@ public class MainActivity extends AppCompatActivity {
 
         chatFragment = new ChatFragment();
         profileFragment = new ProfileFragment();
+        videoCallFragment = new VideoCallFragment();
 
         bottomNavigationView = findViewById(R.id.bottom_navigation);
         searchButton = findViewById(R.id.main_search_btn);
@@ -44,6 +47,10 @@ public class MainActivity extends AppCompatActivity {
                 }
                 if(item.getItemId()==R.id.menu_profile){
                     getSupportFragmentManager().beginTransaction().replace(R.id.main_frame_layout,profileFragment).commit();
+                }
+
+                if(item.getItemId()==R.id.video_call){
+                    getSupportFragmentManager().beginTransaction().replace(R.id.main_frame_layout, videoCallFragment).commit();
                 }
                 return true;
             }
